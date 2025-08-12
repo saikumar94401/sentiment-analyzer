@@ -94,6 +94,8 @@ const SentimentAnalyzer = () => {
         negationActive = false;
       }
     }
+
+    
     
     return scores.length > 0 ? scores : [0];
   };
@@ -352,39 +354,36 @@ const SentimentAnalyzer = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+  <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-xl border-b border-white/20 sticky top-0 z-50 shadow-sm">
+  <header className="bg-white/90 backdrop-blur-xl border-b border-yellow-200 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="p-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl">
+              <div className="p-2 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-xl">
                 <Brain className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  SentimentAI Pro v3
+                <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-orange-600 via-yellow-600 to-pink-500 bg-clip-text text-transparent">
+                  Sentiment Analysis
                 </h1>
-                <p className="text-slate-600 text-sm mt-1">Advanced AI-powered sentiment analysis</p>
+               
               </div>
             </div>
-            <div className="hidden sm:flex items-center space-x-2">
-              <Sparkles className="h-5 w-5 text-indigo-500" />
-              <span className="text-sm text-slate-600 font-medium">Latest AI</span>
-            </div>
+            
           </div>
         </div>
       </header>
 
       {/* Navigation */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-wrap gap-2 p-1 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/30 w-fit">
+        <div className="flex flex-wrap gap-2 p-1 bg-white/80 backdrop-blur-lg rounded-2xl border border-yellow-200 w-fit">
           <button
             onClick={() => setActiveTab('single')}
             className={`flex items-center px-4 sm:px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
               activeTab === 'single'
-                ? 'bg-white shadow-lg text-indigo-600 scale-105'
-                : 'text-slate-600 hover:text-slate-800 hover:bg-white/40'
+                ? 'bg-white shadow-lg text-orange-600 scale-105'
+                : 'text-yellow-700 hover:text-yellow-800 hover:bg-white/60'
             }`}
           >
             <FileText className="w-4 h-4 mr-2" />
@@ -396,8 +395,8 @@ const SentimentAnalyzer = () => {
             onClick={() => setActiveTab('batch')}
             className={`flex items-center px-4 sm:px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
               activeTab === 'batch'
-                ? 'bg-white shadow-lg text-indigo-600 scale-105'
-                : 'text-slate-600 hover:text-slate-800 hover:bg-white/40'
+                ? 'bg-white shadow-lg text-orange-600 scale-105'
+                : 'text-yellow-700 hover:text-yellow-800 hover:bg-white/60'
             }`}
           >
             <Upload className="w-4 h-4 mr-2" />
@@ -409,8 +408,8 @@ const SentimentAnalyzer = () => {
             onClick={() => setActiveTab('history')}
             className={`flex items-center px-4 sm:px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
               activeTab === 'history'
-                ? 'bg-white shadow-lg text-indigo-600 scale-105'
-                : 'text-slate-600 hover:text-slate-800 hover:bg-white/40'
+                ? 'bg-white shadow-lg text-orange-600 scale-105'
+                : 'text-yellow-700 hover:text-yellow-800 hover:bg-white/60'
             }`}
           >
             <History className="w-4 h-4 mr-2" />
@@ -435,7 +434,7 @@ const SentimentAnalyzer = () => {
             <div className="space-y-6">
               <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8 hover:shadow-2xl transition-all duration-500">
                 <div className="flex items-center mb-6">
-                  <div className="p-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg mr-3">
+                  <div className="p-2 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-lg mr-3">
                     <FileText className="h-5 w-5 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-slate-800">Text Analysis</h3>
@@ -462,7 +461,7 @@ const SentimentAnalyzer = () => {
                     <button
                       onClick={handleAnalyze}
                       disabled={!text.trim() || loading}
-                      className="flex-1 relative px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-2xl hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-500 shadow-lg hover:shadow-2xl hover:scale-105 transform"
+                      className="flex-1 relative px-8 py-4 bg-gradient-to-r from-orange-500 via-yellow-400 to-pink-400 text-white font-semibold rounded-2xl hover:from-orange-600 hover:via-yellow-500 hover:to-pink-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-500 shadow-lg hover:shadow-2xl hover:scale-105 transform"
                     >
                       {loading ? (
                         <div className="flex items-center justify-center space-x-3">
@@ -479,7 +478,7 @@ const SentimentAnalyzer = () => {
                     </button>
                     <button
                       onClick={() => setText('')}
-                      className="px-6 py-4 bg-slate-100 text-slate-600 font-medium rounded-2xl hover:bg-slate-200 transition-all duration-300"
+                      className="px-6 py-4 bg-yellow-100 text-yellow-700 font-medium rounded-2xl hover:bg-yellow-200 transition-all duration-300"
                     >
                       Clear
                     </button>
@@ -488,7 +487,7 @@ const SentimentAnalyzer = () => {
               </div>
 
               {/* Examples */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8">
+              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-yellow-200 p-8">
                 <h3 className="text-lg font-semibold text-slate-800 mb-6">Try These Examples</h3>
                 <div className="grid gap-3">
                   {examples.map((example, index) => (
@@ -513,7 +512,7 @@ const SentimentAnalyzer = () => {
             <div className="space-y-6">
               {result ? (
                 <>
-                  <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/30 p-8 transform hover:scale-105 transition-all duration-500">
+                    <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-yellow-200 p-8 transform hover:scale-105 transition-all duration-500">
                     <div className="text-center">
                       <div className="text-8xl mb-6 animate-bounce">
                         {getSentimentIcon(result.sentiment)}
@@ -548,7 +547,7 @@ const SentimentAnalyzer = () => {
                   </div>
 
                   {/* Detailed Breakdown */}
-                  <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8">
+                  <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-yellow-200 p-8">
                     <h3 className="text-xl font-semibold text-slate-800 mb-6">Confidence Breakdown</h3>
                     
                     <div className="space-y-6">
@@ -621,7 +620,7 @@ const SentimentAnalyzer = () => {
                   </div>
                 </>
               ) : (
-                <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8 text-center">
+                <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-yellow-200 p-8 text-center">
                   <div className="text-6xl mb-4">🤖</div>
                   <h3 className="text-xl font-semibold text-slate-700 mb-2">Ready to Analyze</h3>
                   <p className="text-slate-500">Enter some text and click "Analyze Sentiment" to get started!</p>
@@ -636,7 +635,7 @@ const SentimentAnalyzer = () => {
           <div className="space-y-8">
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Upload Section */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8">
+              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-yellow-200 p-8">
                 <div className="flex items-center mb-6">
                   <div className="p-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg mr-3">
                     <Upload className="h-5 w-5 text-white" />
@@ -644,7 +643,7 @@ const SentimentAnalyzer = () => {
                   <h3 className="text-xl font-semibold text-slate-800">Upload CSV File</h3>
                 </div>
                 
-                <div className="border-2 border-dashed border-slate-300 rounded-2xl p-8 text-center hover:border-indigo-400 transition-all duration-300">
+                <div className="border-2 border-dashed border-yellow-300 rounded-2xl p-8 text-center hover:border-orange-400 transition-all duration-300">
                   <Upload className="w-16 h-16 text-slate-400 mx-auto mb-4" />
                   <input
                     type="file"
@@ -653,7 +652,7 @@ const SentimentAnalyzer = () => {
                     className="mb-4"
                     id="csv-upload"
                   />
-                  <label htmlFor="csv-upload" className="cursor-pointer text-indigo-600 hover:text-indigo-700 font-semibold">
+                  <label htmlFor="csv-upload" className="cursor-pointer text-orange-600 hover:text-orange-700 font-semibold">
                     Choose CSV file
                   </label>
                   <p className="text-sm text-slate-500 mt-2">
@@ -663,18 +662,18 @@ const SentimentAnalyzer = () => {
                 
                 {csvData.length > 0 && (
                   <div className="mt-6 space-y-4">
-                    <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
-                      <p className="text-emerald-700 font-semibold">
+                    <div className="p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+                      <p className="text-yellow-700 font-semibold">
                         ✅ Successfully loaded {csvData.length} rows
                       </p>
-                      <p className="text-sm text-emerald-600 mt-1">
+                      <p className="text-sm text-yellow-600 mt-1">
                         Columns: {Object.keys(csvData[0]).join(', ')}
                       </p>
                     </div>
                     <button
                       onClick={processCsvBatch}
                       disabled={processingCsv}
-                      className="w-full px-6 py-4 bg-gradient-to-r from-emerald-500 to-blue-600 text-white font-semibold rounded-2xl hover:from-emerald-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-xl"
+                      className="w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-semibold rounded-2xl hover:from-orange-600 hover:to-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-xl"
                     >
                       {processingCsv ? (
                         <div className="flex items-center justify-center space-x-3">
@@ -693,7 +692,7 @@ const SentimentAnalyzer = () => {
               </div>
 
               {/* Results Summary */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8">
+              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-yellow-200 p-8">
                 <div className="flex items-center mb-6">
                   <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mr-3">
                     <BarChart3 className="h-5 w-5 text-white" />
@@ -735,7 +734,7 @@ const SentimentAnalyzer = () => {
                     
                     <button
                       onClick={downloadResults}
-                      className="w-full px-6 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-2xl hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                      className="w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-semibold rounded-2xl hover:from-orange-600 hover:to-yellow-500 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                     >
                       <Download className="w-5 h-5" />
                       <span>Download Enhanced CSV</span>
@@ -753,7 +752,7 @@ const SentimentAnalyzer = () => {
 
             {/* Detailed Results Table */}
             {csvResults.length > 0 && (
-              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 p-8">
+              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-yellow-200 p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6">Detailed Analysis Results</h3>
                 <div className="overflow-x-auto">
                   <div className="max-h-96 overflow-y-auto rounded-xl border border-slate-200">
@@ -926,20 +925,20 @@ const SentimentAnalyzer = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white/70 backdrop-blur-xl border-t border-white/20 mt-16">
+      {/* <footer className="bg-white/90 backdrop-blur-xl border-t border-yellow-200 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
-              <p className="text-slate-600 font-medium">Built with React, Tailwind CSS & Advanced AI Processing</p>
-              <p className="text-sm text-slate-500 mt-1">Enhanced with batch analysis, detailed insights & history tracking</p>
+              <p className="text-yellow-700 font-medium">Built with React, Tailwind CSS & Human Touch</p>
+              <p className="text-sm text-yellow-600 mt-1">Enhanced with batch analysis, detailed insights & history tracking</p>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-              <span className="text-sm text-slate-600 font-medium">Live & Processing</span>
+              <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+              <span className="text-sm text-yellow-700 font-medium">Live & Friendly</span>
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
       
     </div>
   );

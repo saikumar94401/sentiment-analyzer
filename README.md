@@ -1,16 +1,29 @@
-<<<<<<< HEAD
-# sentiment-analyzer
-=======
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sentiment Insight v3
 
-Currently, two official plugins are available:
+A modern, human-centric sentiment analysis web app built with React and Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How It Was Built
+- **Framework:** React (with Vite for fast development)
+- **Styling:** Tailwind CSS for rapid, responsive, and beautiful UI
+- **Icons:** Lucide React icon set for a friendly look
+- **Features:**
+	- Single and batch (CSV) sentiment analysis
+	- Advanced tokenizer and scoring logic
+	- History tracking and CSV download
+	- Warm, inviting color palette and gradients
 
-## Expanding the ESLint configuration
+## Resources Used
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [MDN Web Docs](https://developer.mozilla.org/) for JavaScript references
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 93e86fc (Initial commit: Sentiment Analyzer React app with Tailwind CSS)
+## How to Run
+1. Install dependencies: `npm install`
+2. Start the app: `npm run dev`
+3. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+---
+Feel free to customize, extend, or use as inspiration for your own projects!
