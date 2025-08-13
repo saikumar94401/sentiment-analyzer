@@ -923,22 +923,6 @@ const SentimentAnalyzer = () => {
           </div>
         )}
       </main>
-
-      {/* Footer */}
-      {/* <footer className="bg-white/90 backdrop-blur-xl border-t border-yellow-200 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-center sm:text-left">
-              <p className="text-yellow-700 font-medium">Built with React, Tailwind CSS & Human Touch</p>
-              <p className="text-sm text-yellow-600 mt-1">Enhanced with batch analysis, detailed insights & history tracking</p>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-              <span className="text-sm text-yellow-700 font-medium">Live & Friendly</span>
-            </div>
-          </div>
-        </div>
-      </footer> */}
       
     </div>
   );
