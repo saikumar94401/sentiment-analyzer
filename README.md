@@ -1,5 +1,5 @@
 
-# Sentiment Insight v3
+# Sentiment Analysis
 
 A modern, human-centric sentiment analysis web app built with React and Tailwind CSS.
 
@@ -26,4 +26,4 @@ A modern, human-centric sentiment analysis web app built with React and Tailwind
 3. Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ---
-Feel free to customize, extend, or use as inspiration for your own projects!
+
