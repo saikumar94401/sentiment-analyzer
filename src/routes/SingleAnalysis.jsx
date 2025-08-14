@@ -1,5 +1,4 @@
-import React from 'react';
-import FileUpload from '../components/FileUpload';
+
 
 const SingleAnalysis = ({ inputText, setInputText, onAnalyze, isLoading, results, error }) => (
   <div className="max-w-3xl mx-auto py-8 px-4 space-y-8">
